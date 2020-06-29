@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+input{
+  padding: 1rem;
+  width: 35%;
+  border-radius: 30px;
+  outline: none;
+  font-size: 1rem;
+  padding-left: 4rem;
+}
+input::placeholder{
+  font-size: 1rem;
+}
+img{
+  transform: translate(-620px,7px);
+
+}

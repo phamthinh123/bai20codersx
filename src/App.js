@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import Search from "./img/search.svg"
 import './App.css';
 
-function App() {
+class App extends Component {
+  constructor(props){
+    super(props);
+    this.inputElement=React.createRef();
+  }
+  componentDidMount(){
+    this.inputElement.current.focus()
+  }
+  render(){
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <h1>Google</h1>
+    <input type="text" placeholder="Tìm kiếm trên Google hoặc nhập một URL" ref={this.inputElement}/>
+    <img src={Search} width="28" height="28"/>
     </div>
   );
 }
+}
 
-export default App;
+export default App
